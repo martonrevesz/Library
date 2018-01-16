@@ -4,7 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using SimbaProject.Models;
-using SimbaProject.ViewModels;
 using SimbaProject.Repositories;
 
 namespace SimbaProject.Controllers
