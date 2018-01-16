@@ -31,6 +31,7 @@ namespace SimbaProject.Controllers
             return View(readerList);
         }
 
+        [HttpGet("add")]
         public IActionResult Form()
         {
             return View();
@@ -43,6 +44,8 @@ namespace SimbaProject.Controllers
             LibraryRepository.LibraryContext.SaveChanges();
             return RedirectToAction("list");
         }
+
+
 
         [HttpGet("update/{id}")]
         public IActionResult UpdateForm([FromRoute]int id)
