@@ -1,0 +1,54 @@
+﻿table, th, td {
+    border: 1px solid #744021;
+    line-height: 1.7;
+    font-size: 30px;
+}
+
+nav, nav a {
+    background-color: saddlebrown;
+    border-radius: 6px;
+    color: lightgoldenrodyellow;
+    }
+
+nav {
+    margin-bottom: 25px;
+}
+
+nav a {
+    margin: 5%;
+}
+
+
+
+a {
+    color: inherit; 
+    text-decoration: inherit;
+}
+
+
+body {
+    background-image: url("./paper2.jpg");
+    background-repeat: no-repeat;
+    padding: 0% 4%;
+    font-size: 30px;
+    line-height: 1.7;
+}
+
+
+th, td {
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+img {
+    float: right;
+    margin: 20px;
+}
+
+input, text {
+    border-radius: 6px;
+    font-size: 1em;
+}
+
+
+

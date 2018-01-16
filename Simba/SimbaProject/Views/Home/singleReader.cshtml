@@ -1,0 +1,40 @@
+﻿@model SimbaProject.Models.Reader
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Single Reader</title>
+    <link rel="stylesheet" type="text/css" href="~/style.css">
+</head>
+<body>
+    <nav>
+        <center>
+            <a href="/">Home</a>
+            <a href="/list">Reader list</a>
+            <a href="/update/@Model.Id">Update data</a>
+            <a href="/fee/@Model.Id">Fine reader</a>
+            <a href="/delete/@Model.Id">Delete</a>
+        </center>
+    </nav>
+    <center>
+        <table style="width:30%">
+            <tr>
+                <td>Name</td>
+                <td>@Model.Name</td>
+            </tr>
+            <tr>
+                <td>Fine</td>
+                <td>@string.Format("{0:0.00 , $}", Model.Fine)</td>
+            </tr>
+            <tr>
+                <td>AccountType</td>
+                <td>@Model.UserType</td>
+            </tr>
+            <tr>
+                <td>Vip</td>
+                <td>@Model.VIP</td>
+            </tr>
+        </table>
+    </center>
+</body>
+</html>
+
+

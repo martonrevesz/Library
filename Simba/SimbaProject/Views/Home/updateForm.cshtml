@@ -1,0 +1,31 @@
+﻿@model SimbaProject.Models.Reader
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="~/style.css">
+    <meta charset="UTF-8">
+</head>
+<body>
+    <nav>
+        <center>
+            <a href="/">Home</a>
+            <a href="/list">Reader list</a>
+        </center>
+    </nav>
+    <form action="/update/@Model.Id" method="post">
+        Name:
+        <input type="text" name="Name" value=@Model.Name required><br>
+        Fine:
+        <input type="number" name="Fine" value=@Model.Fine><br>
+        ReaderType:
+        <input type="text" name="UserType" value=@Model.UserType /><br>
+        VIP:
+        <input type="checkbox" name="VIP" value="true" checked="@Model.VIP" style="width:30px ; height: 30px" />
+        <br><br>
+
+        <input type="submit"  />
+    </form>
+
+</body>
+</html>

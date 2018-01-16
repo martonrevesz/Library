@@ -1,0 +1,33 @@
+﻿@model System.Collections.Generic.List<SimbaProject.Models.Reader>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Reader Catalogue</title>
+    <link rel="stylesheet" type="text/css" href="~/style.css">
+</head>
+<body>
+    <nav>
+        <center>
+            <a href="/">Home</a>
+            <a href="/list">Reader list</a>
+            <a href="/add">New Reader</a>
+        </center>
+    </nav>
+
+    <center>
+        <table style="width:30%">
+            <tr>
+                <th>Name</th>
+            </tr>
+            @for(int i = 0; i < @Model.Count; i++)
+            {
+                var style = @Model[i].VIP ? "green" : "black";
+                <tr>
+                    <td> <a href="/single/@Model[i].Id"> @Model[i].Name</a></td>
+                </tr>
+            }
+        </table>
+        
+    </center>
+</body>
+</html>
