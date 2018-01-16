@@ -29,8 +29,7 @@ namespace SimbaProject
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            services.AddDbContext<LibraryContext>(options =>
-                options.UseNpgsql(Configuration["CONNECTIONSTRING"]));
+            services.AddDbContext<LibraryContext>(options => options.UseNpgsql(Configuration["CONNECTIONSTRING"]));
             services.AddScoped<LibraryRepository>();
 
         }
