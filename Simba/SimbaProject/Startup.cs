@@ -10,16 +10,27 @@ using Microsoft.Extensions.DependencyInjection;
 using SimbaProject.Entities;
 using Microsoft.EntityFrameworkCore;
 using SimbaProject.Repositories;
+using Microsoft.Extensions.Configuration;
 
 namespace SimbaProject
 {
     public class Startup
     {
+        public static IConfigurationRoot Configuration { get; set; }
+
+        public Startup()
+        {
+            var builder = new ConfigurationBuilder()
+                .AddEnvironmentVariables();
+
+            Configuration = builder.Build();
+        }
+
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
             services.AddDbContext<LibraryContext>(options =>
-                options.UseNpgsql("User ID=vzaxfwdvflvbnr;Password=e00f01d23416e40becbcee64e71876fd428e252d923a5eeabc8024235b316209;Host=ec2-54-217-245-9.eu-west-1.compute.amazonaws.com;Port=5432;Database=d6gb44hc3ocbvt;Pooling=true;sslmode=Require;Trust Server Certificate=true;Timeout=1000;"));
+                options.UseNpgsql(Configuration["CONNECTIONSTRING"]));
             services.AddScoped<LibraryRepository>();
 
         }
@@ -31,9 +42,9 @@ namespace SimbaProject
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseMvc();
-
             app.UseStaticFiles();
+
+            app.UseMvc();
         }
     }
 }
