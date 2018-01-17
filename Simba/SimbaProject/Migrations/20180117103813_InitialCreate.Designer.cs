@@ -11,7 +11,7 @@ using System;
 namespace SimbaProject.Migrations
 {
     [DbContext(typeof(LibraryContext))]
-    [Migration("20180116170622_InitialCreate")]
+    [Migration("20180117103813_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
