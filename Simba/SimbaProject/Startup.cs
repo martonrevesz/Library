@@ -30,7 +30,7 @@ namespace SimbaProject
         {
             services.AddMvc();
             services.AddDbContext<LibraryContext>(options =>
-                options.UseNpgsql(Configuration["CONNECTIONSTRING"]));
+                options.UseNpgsql("User ID = oeqbvhkyychhdo; Password = 0e3ff9c02d52a0e6d6415dfdab776db3e740101f382ec8d09cd2ed5042a24275; Host = ec2-54-217-245-9.eu-west-1.compute.amazonaws.com; Port = 5432; Database = d71d9o4jftdbk0; Pooling = true; sslmode = Require; Trust Server Certificate = true; Timeout = 1000;"));
             services.AddScoped<LibraryRepository>();
 
         }
