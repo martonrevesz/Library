@@ -24,6 +24,7 @@ namespace SimbaProject
                 .AddEnvironmentVariables();
 
             Configuration = builder.Build();
+            //hahaha fatastic changes
         }
 
         public void ConfigureServices(IServiceCollection services)
